@@ -1,0 +1,23 @@
+// @import '~@angular/material/theming';
+
+// $primary: mat-palette($mat-indigo);
+nav > a {
+  padding: 5px;
+  text-decoration: none;
+}
+nav > a.active {
+  background-color: #5cdb95;
+  color: #05386b
+}
+
+.header-row {
+  width: 100%;
+
+}
+.backCol {
+  background-color: #379683;
+  color: white
+}
+.btn-cart {
+  background-color:#05386b
+}

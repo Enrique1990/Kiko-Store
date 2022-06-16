@@ -1,0 +1,120 @@
+<mat-horizontal-stepper class="container">
+  <mat-step>
+    <ng-template matStepLabel>Your products</ng-template>
+    <div *ngIf = "(products$ | async) as products">
+      <p *ngIf="products.length === 0">No products</p>
+      <mat-nav-list>
+
+      </mat-nav-list>
+      <div class=" orderstyle row" *ngFor="let product of products">
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <div class="box">
+            <h3>Product : {{product.title}}</h3>
+          </div>
+        </div>
+        <div class=" col-xs-6 col-sm-3 col-md-3">
+          <div class="box">
+            <img class="image" [src]="product.image" alt="">
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 col-md-3">
+          <div class="box">
+            <h3>Price: {{ product.price }}</h3>
+          </div>
+        </div>
+        <!-- <div *ngIf="(products$ | async ) as products">
+          <ng-template matStepLabel>
+              Sus productos
+          </ng-template>
+          <p *ngIf="products.length === 0">No hay productos</p>
+          <div class="row" *ngFor="let product of products">
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                  <div class="box">
+                      <img [src]="product.image" class="image" alt="">
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                  <div class="box">
+                      {{product.title}}
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                  <div class="box">
+                      {{product.price}}
+                  </div>
+              </div>
+          </div>
+      </div> -->
+      </div>
+
+
+    <!-- <ul>
+      <li *ngFor="let product of products">
+        {{product.title}}
+      </li>
+    </ul> -->
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Personal Information</ng-template>
+    <form [formGroup]="form" class="formInfo" (ngSubmit)="save($event)">
+      <mat-card>
+          <mat-card-content class="form" >
+              <!-- Id -->
+              <mat-form-field appearance="outline" class="id">
+                  <mat-label>Name</mat-label>
+                  <input matInput formControlName="name" type="text">
+              </mat-form-field>
+              <!-- Title -->
+              <mat-form-field appearance="outline" class="title">
+                  <mat-label>Address</mat-label>
+                  <input matInput formControlName="address" type="text">
+              </mat-form-field>
+              <!-- Price -->
+              <mat-form-field appearance="outline" class="price">
+                  <mat-label>Phone</mat-label>
+                  <input matInput formControlName="phone" type="number">
+              </mat-form-field>
+          </mat-card-content>
+          <mat-card-actions>
+              <button  mat-raised-button class="btn" type="submit">Submit</button>
+          </mat-card-actions>
+      </mat-card>
+    </form>
+  </mat-step>
+  <mat-step>
+    <form [formGroup]="form" class="formInfo" (ngSubmit)="save($event)">
+      <mat-card>
+        <ng-template matStepLabel>Payment</ng-template>
+          <mat-card-content class="form" >
+              <!-- Id -->
+              <mat-form-field appearance="outline" class="id">
+                  <mat-label>Name</mat-label>
+                  <input matInput formControlName="name" type="text">
+              </mat-form-field>
+              <!-- Title -->
+              <mat-form-field appearance="outline" class="title">
+                  <mat-label>Card Number</mat-label>
+                  <input matInput formControlName="card-number" type="text">
+              </mat-form-field>
+              <!-- Price -->
+              <mat-form-field appearance="outline" class="price">
+                  <mat-label>Exp Date</mat-label>
+                  <input matInput formControlName="phone" type="number">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="price">
+                  <mat-label>Cvs</mat-label>
+                  <input matInput formControlName="phone" type="number">
+              </mat-form-field>
+          </mat-card-content>
+          <mat-card-actions>
+              <button  mat-raised-button class="btn" type="submit">Submit</button>
+          </mat-card-actions>
+      </mat-card>
+    </form>
+  </mat-step>
+
+</mat-horizontal-stepper>
+
+

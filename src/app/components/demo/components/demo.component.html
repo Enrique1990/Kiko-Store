@@ -1,0 +1,43 @@
+<div class="first-container">
+  <!-- <input type="text" [(ngModel)]="title" /><br />
+  <input type="text" [(ngModel)]="power" >{{power | exponential}} -->
+  <div *ngIf="title === 'Store'; then store; else welcome">Simple vista</div>
+  <!-- <div *ngIf="title === 'nicholas'">este es un div</div>store -->
+  <!-- Vista o template-->
+  <ng-template #store> Mostrando contenido </ng-template>
+
+  <ng-template #welcome>
+    Welcome to Store
+    <hr
+  /></ng-template>
+
+  <div *ngIf="title === 'dreams'; then fantasia; else realidad">Life</div>
+
+  <ng-template #fantasia>Its the way <br /></ng-template>
+  <ng-template #realidad>Write your list <br /></ng-template>
+
+  <div
+    *ngIf="title === '#'; then numeros"
+    ;then= " title === 'titis'"
+    then
+    letras
+  >
+    yo
+  </div>
+
+  <ng-template #numeros>codigos numericos </ng-template>
+  <ng-template #letras>solo letras </ng-template>
+
+  <button class="btn" (click)="addItem()">Add Item</button>
+  <div class="del">
+    <ul>
+      <li *ngIf="items.length === 0">Empty list</li>
+      <li *ngIf="items.length === 1">Pocos items chequea bien</li>
+      <li *ngFor="let name of items; index as i">
+        {{ i }}-{{ name }}
+
+        <button class="btn" (click)="deleteItem(i)">Delete</button>
+      </li>
+    </ul>
+  </div>
+</div>

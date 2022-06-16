@@ -1,0 +1,38 @@
+<!-- <div *ngIf=producto>
+<div>
+  <img src={{producto.image}} alt="" >
+</div>
+<div>
+  <ul> -->
+    <!-- <li>Nombre: {{producto.title}}</li> -->
+    <!-- <li>Precio: {{producto.price | currency}}</li>
+  </ul>
+  <p>Description: {{producto.description}}</p>
+</div>
+<button mat-raised-button (click)="createProduct()">Create</button>
+<button mat-raised-button (click)="updateProduct()">Update</button>
+<button mat-raised-button (click)="deleteProduct()">Delete</button>
+</div> -->
+<div class="row" *ngIf=producto>
+  <div class="col-xs-8">
+      <div class="box">
+        <img src={{producto.image}} alt="" >
+      </div>
+
+  </div>
+  <div class="col-xs-4">
+    <div class="box">
+      <mat-list>
+        <mat-list-item><strong>Price</strong>: {{producto.price | currency}}</mat-list-item>
+        <mat-list-item><strong>Description</strong>: {{producto.description}}</mat-list-item>
+      </mat-list>
+        </div>
+        <!-- <div class="box">
+          <button mat-raised-button (click)="createProduct()">Create</button>
+          <button mat-raised-button (click)="updateProduct()">Update</button>
+          <button mat-raised-button (click)="deleteProduct()">Delete</button>
+        </div> -->
+  </div>
+
+
+</div>

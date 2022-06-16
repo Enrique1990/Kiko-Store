@@ -1,0 +1,67 @@
+
+<div class="row">
+  <div class="col-xs-6 col-md-6 col-lg-8">
+  <div class="text box">
+    <h1><strong>Contact</strong></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, ea architecto incidunt ullam nulla id quasi, minus eius ut earum voluptatem aspernatu </p>
+    </div>
+  </div>
+
+      <div class="col-xs-6 col-md-6 col-lg-4">
+        <div class="box">
+        <img class="image" src="https://www.montana.edu/hr/images/contactus.png" >
+      </div>
+      </div>
+
+</div>
+<div class="row">
+
+
+      <div class="col-xs-6 col-md-6 col-lg-8">
+        <div class="form box">
+          <form class="example-form" [formGroup]="form" (ngSubmit)="save($event)">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email"placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Phone</mat-label>
+              <input matInput formControlName="phone"placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Leave a comment</mat-label>
+              <textarea formControlName="coment" matInput placeholder="Ex. It makes me feel..."></textarea>
+            </mat-form-field>
+
+            <button mat-raised-button class="btn" type="submit">Submit</button>
+          </form>
+      </div>
+      </div>
+
+      <div class="col-xs-6 col-md-6 col-lg-4">
+        <div class="text2 box">
+          <h1><strong>Any Dude</strong></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, ea architecto incidunt ullam nulla id quasi, minus eius ut earum voluptatem aspernatu </p>
+          <div class="info">
+
+            <p><strong>Address</strong>: lorem ipsum dolor sit amet, consectetur adip</p>
+          </div>
+          <div class="info">
+
+            <p><strong>Email</strong>: lorem ipsum dolor sit amet, consectetur adip</p>
+          </div>
+          <div class="info">
+
+            <p><strong>Phone</strong>: lorem ipsum dolor sit amet, consectetur adip</p>
+          </div>
+          <!-- <p><strong>Email</strong>: lorem ipsum dolor sit amet, consectetur adip</p>
+          <p><strong>Phone</strong>: lorem ipsum dolor sit amet, consectetur adip</p> -->
+          </div>
+        </div>
+</div>
+

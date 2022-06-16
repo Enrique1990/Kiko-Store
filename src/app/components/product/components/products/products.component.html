@@ -1,0 +1,25 @@
+
+<div class="product-grid">
+  <app-product *ngFor="let producto of productos" (productClicked)="clickProduct($event)" [product]='producto'></app-product>
+  <!-- <img
+    class="img-product"
+    [src]="producto.image"
+    alt="{{ producto.title }}"
+  />
+  <div class="editText">
+    <p>{{ i }}- Producto: {{ producto.title }}</p>
+
+    <p>-Price: {{ producto.price }}</p>
+
+    <div [ngSwitch]="producto.price">
+      <p *ngSwitchCase="200">
+        -Obtuviste un cupon de 20 dolares de descuento
+      </p>
+      <p *ngSwitchCase="400">-Obtuviste un Envio gratuito</p>
+      <p *ngSwitchCase="600">
+        -Obtuviste un cupon de 25% de descuento en la proxima compra
+      </p>
+    </div>
+  </div> -->
+
+</div>
